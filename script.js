@@ -12,4 +12,4 @@ var diasEmbarazo = Math.floor((fechaActual - fechaConcepcion) / (24 * 60 * 60 * 
 
 // Mostrar el resultado al usuario
 var resultadoElemento = document.getElementById("resultado");
-resultadoElemento.innerHTML = "Actualmente estás en la semana " + semanasEmbarazo + " y el día " + diasEmbarazo + " de embarazo";
+resultadoElemento.innerHTML = "Actualmente, Virginia Alcalá está en su semana " + semanasEmbarazo + " y su día " + diasEmbarazo + " de embarazo";
