@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
     var diasEmbarazo = Math.floor((fechaActual - fechaConcepcion) / (24 * 60 * 60 * 1000) % 7);
 
     // Mostrar el resultado al usuario
-    alert("Actualmente estás en la semana " + semanasEmbarazo + " y el día " + diasEmbarazo + " de embarazo");
+    alert("Actualmente, Virginia está en la semana " + semanasEmbarazo + " y el día " + diasEmbarazo + " de embarazo");
 });
