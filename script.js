@@ -1,5 +1,5 @@
 // Fijar la fecha de concepción al 08/08/2023
-var fechaConcepcion = new Date('08/08/2023');
+var fechaConcepcion = new Date('02/08/2023');
 
 // Obtener la fecha actual
 var fechaActual = new Date();
