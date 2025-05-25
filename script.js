@@ -1,15 +1,19 @@
-// Fijar la fecha de concepción al 08/08/2023
-var fechaConcepcion = new Date('08/02/2023');
+// Fijar la fecha de concepción al 02/08/2023
+const fechaConcepcion = new Date('2023-08-02');
 
 // Obtener la fecha actual
-var fechaActual = new Date();
+const fechaActual = new Date();
 
-// Calcular el número de semanas de embarazo
-var semanasEmbarazo = Math.floor((fechaActual - fechaConcepcion) / (7 * 24 * 60 * 60 * 1000));
+// Diferencias en milisegundos
+const MILISEGUNDOS_DIA = 24 * 60 * 60 * 1000;
+const MILISEGUNDOS_SEMANA = MILISEGUNDOS_DIA * 7;
+const diferencia = fechaActual - fechaConcepcion;
 
-// Calcular el número de días de embarazo
-var diasEmbarazo = Math.floor((fechaActual - fechaConcepcion) / (24 * 60 * 60 * 1000) % 7);
+// Calcular el número de semanas y días de embarazo
+const semanasEmbarazo = Math.floor(diferencia / MILISEGUNDOS_SEMANA);
+const diasEmbarazo = Math.floor((diferencia % MILISEGUNDOS_SEMANA) / MILISEGUNDOS_DIA);
 
 // Mostrar el resultado al usuario
-var resultadoElemento = document.getElementById("resultado");
-resultadoElemento.innerHTML = "Actualmente, Virginia Alcalá está en su semana " + semanasEmbarazo + " y su día " + diasEmbarazo + " de embarazo";
+const resultadoElemento = document.getElementById('resultado');
+resultadoElemento.textContent =
+  `Actualmente, Virginia Alcalá está en su semana ${semanasEmbarazo} y su día ${diasEmbarazo} de embarazo`;
