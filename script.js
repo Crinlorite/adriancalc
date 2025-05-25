@@ -1,19 +1,23 @@
-// Fijar la fecha de concepción al 02/08/2023
-const fechaConcepcion = new Date('2023-08-02');
+// Fijar la fecha de nacimiento de Adrián al 08/05/2024
+const fechaNacimiento = new Date('2024-05-08');
 
 // Obtener la fecha actual
 const fechaActual = new Date();
 
-// Diferencias en milisegundos
-const MILISEGUNDOS_DIA = 24 * 60 * 60 * 1000;
-const MILISEGUNDOS_SEMANA = MILISEGUNDOS_DIA * 7;
-const diferencia = fechaActual - fechaConcepcion;
+// Calcular años y meses de edad
+let anios = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+let meses = fechaActual.getMonth() - fechaNacimiento.getMonth();
 
-// Calcular el número de semanas y días de embarazo
-const semanasEmbarazo = Math.floor(diferencia / MILISEGUNDOS_SEMANA);
-const diasEmbarazo = Math.floor((diferencia % MILISEGUNDOS_SEMANA) / MILISEGUNDOS_DIA);
+// Ajustar si todavía no ha cumplido el mes en curso
+if (fechaActual.getDate() < fechaNacimiento.getDate()) {
+  meses--;
+}
+if (meses < 0) {
+  anios--;
+  meses += 12;
+}
 
 // Mostrar el resultado al usuario
 const resultadoElemento = document.getElementById('resultado');
 resultadoElemento.textContent =
-  `Actualmente, Virginia Alcalá está en su semana ${semanasEmbarazo} y su día ${diasEmbarazo} de embarazo`;
+  `Virginia ya tuvo a Adrián y ahora Adrián tiene ${anios} años y ${meses} meses.`;
