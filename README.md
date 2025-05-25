@@ -1,6 +1,7 @@
 # adriancalc
-Calculadora para el embarazo de Adrián
 
-Este fue un pequeño proyecto personal que desarrollé durante el embarazo de mi hijo Adrián. Me sirvió para practicar y mejorar mis habilidades de programación mientras vivía un momento muy especial en mi vida.
+Calculadora para el embarazo de Adrián.
 
-Actualmente, el proyecto está abandonado, ya que Adrián ya ha nacido (¡y está precioso!). Lo dejo aquí como recuerdo y como muestra de lo que hice en su día.
+Este pequeño proyecto fue mi primer ejercicio en GitHub, creado antes del nacimiento de mi hijo Adrián. Me ayudó a practicar programación y despertó en mí un interés cada vez mayor por esta disciplina.
+
+Adrián ya ha nacido, así que la calculadora queda como recuerdo de aquella etapa.
